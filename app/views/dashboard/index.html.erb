@@ -1,5 +1,7 @@
 <h1>Satoshi Explorer</h1>
 
+<h2>Block Height: <%= @data_block_tip_height</h2> %>
+
 <h3>Search Blockchain</h3>
     <%= form_tag(search_path, method: :get) do %>
         <%= text_field_tag(:search, params[:search]) %>
