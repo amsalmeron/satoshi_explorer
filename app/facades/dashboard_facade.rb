@@ -6,10 +6,14 @@ class DashboardFacade
 
     def self.all_mempool
         json = DashboardService.get_all_mempool
+        MempoolStats.new(json)
     end
 
     def self.recent_mempool
         json = DashboardService.get_mempool_recent
+        json.map do |tx|
+            MempoolTx.new(json)
+        end
     end
     
 end
