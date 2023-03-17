@@ -6,6 +6,14 @@ RSpec.describe 'Mining Page' do
             visit mining_path
         end
 
+        it "has navbar" do
+            expect("Satoshi Explorer").to appear_before("MINING PAGE")
+            expect("Explore").to appear_before("MINING PAGE")
+            expect("Mining").to appear_before("MINING PAGE")
+            expect("Network").to appear_before("MINING PAGE")
+            expect("Resources").to appear_before("MINING PAGE")
+        end
+
         it 'has a title' do
             expect(page).to have_content("MINING PAGE")
         end

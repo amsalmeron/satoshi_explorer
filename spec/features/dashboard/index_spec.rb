@@ -6,8 +6,16 @@ RSpec.describe 'Dashboard/Welcome Page' do
             visit root_path
         end
 
+        it "has navbar" do
+            expect("Satoshi Explorer").to appear_before("DASHBOARD")
+            expect("Explore").to appear_before("DASHBOARD")
+            expect("Mining").to appear_before("DASHBOARD")
+            expect("Network").to appear_before("DASHBOARD")
+            expect("Resources").to appear_before("DASHBOARD")
+        end
+        
         it 'has a title' do
-            expect(page).to have_content("Satoshi Explorer")
+            expect(page).to have_content("DASHBOARD")
             expect(page).to have_content("Search Blockchain")
         end
 

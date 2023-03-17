@@ -10,6 +10,17 @@
   </head>
 
   <body>
+    <%= link_to "Satoshi Explorer", root_path, class: "nav-link"%>
+    <%= link_to "Explore", "/explorer", class: "nav-link"%>
+    <%= link_to "Mining", "/mining", class: "nav-link"%>
+    <%= link_to "Network", "/network", class: "nav-link"%>
+    <%= link_to "Resources", "/resources", class: "nav-link"%>
+
+    <%= form_tag("/search", method: :get) do %>
+        <%= text_field_tag(:search, params[:search]) %>
+        <%= submit_tag ("Search") %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
