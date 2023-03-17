@@ -2,6 +2,20 @@
 
 <%# <h2>Block Height: <%= @data_block_tip_height %>
 
+<h2>Mempool</h2>
+<h3>Statistics</h3>
+<p>Transaction Count: <%= @mempool_stats.count%></p>
+<p>Total vSize: <%= @mempool_stats.vsize%></p>
+<p>Total Fees: <%= @mempool_stats.total_fee%></p>
+
+<h3>Recent Transactions</h3>
+<%= @mempool_txs.map do |tx| %>
+    <p>Transaction ID: <%= tx.txid %></p>
+    <p>Fee: <%= tx.fee %></p>
+    <p>vSize: <%= tx.vsize %></p>
+    <p>Value: <%= tx.value %></p>
+<% end %>
+
 <h3>Search Blockchain</h3>
     <%= form_tag(search_path, method: :get) do %>
         <%= text_field_tag(:search, params[:search]) %>

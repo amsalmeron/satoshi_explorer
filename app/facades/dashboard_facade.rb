@@ -11,8 +11,8 @@ class DashboardFacade
 
     def self.recent_mempool
         json = DashboardService.get_mempool_recent
-        json.map do |tx|
-            MempoolTx.new(json)
+        txs = json.map do |tx|
+            MempoolTx.new(tx)
         end
     end
     
