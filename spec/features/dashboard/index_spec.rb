@@ -10,7 +10,7 @@ RSpec.describe 'Dashboard/Welcome Page' do
             expect("Satoshi Explorer").to appear_before("DASHBOARD")
             expect("Explore").to appear_before("DASHBOARD")
             expect("Mining").to appear_before("DASHBOARD")
-            expect("Network").to appear_before("DASHBOARD")
+            expect("Lightning").to appear_before("DASHBOARD")
             expect("Resources").to appear_before("DASHBOARD")
         end
         

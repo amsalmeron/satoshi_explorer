@@ -10,7 +10,7 @@ RSpec.describe 'Search Page' do
             expect("Satoshi Explorer").to appear_before("SEARCH RESULTS PAGE")
             expect("Explore").to appear_before("SEARCH RESULTS PAGE")
             expect("Mining").to appear_before("SEARCH RESULTS PAGE")
-            expect("Network").to appear_before("SEARCH RESULTS PAGE")
+            expect("Lightning").to appear_before("SEARCH RESULTS PAGE")
             expect("Resources").to appear_before("SEARCH RESULTS PAGE")
         end
 
