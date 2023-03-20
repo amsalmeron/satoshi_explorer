@@ -1,1 +1,9 @@
 <h1>MINING PAGE</h1>
+
+<h3>Top Minning Pools (Past 6 Months)</h3>
+<%= @mining_pools.each do |pool| %>
+    <p>Rank: <%= pool.rank %></p>
+    <p>Name: <%= pool.name %></p>
+    <p>Link: <%= pool.link %></p>
+    <p>Block Count: <%= pool.blockCount %></p>
+<% end %>

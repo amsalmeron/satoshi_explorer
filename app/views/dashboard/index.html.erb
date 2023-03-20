@@ -8,6 +8,8 @@
 <p>Total vSize: <%= @mempool_stats.vsize%></p>
 <p>Total Fees: <%= @mempool_stats.total_fee%></p>
 
+<hr>
+
 <h3>Recent Transactions</h3>
 <%= @mempool_txs.map do |tx| %>
     <p>Transaction ID: <%= tx.txid %></p>
@@ -15,6 +17,8 @@
     <p>vSize: <%= tx.vsize %></p>
     <p>Value: <%= tx.value %></p>
 <% end %>
+
+<hr>
 
 <h3>Search Blockchain</h3>
     <%= form_tag(search_path, method: :get) do %>

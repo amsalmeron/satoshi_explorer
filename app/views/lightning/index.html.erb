@@ -1,1 +1,15 @@
 <h1>LIGHTNING PAGE</h1>
+
+<hr>
+
+<p>Total Capacity: <%= @lightning_statistics.total_capacity %></p>
+<p>Channel Count: <%= @lightning_statistics.channel_count %></p>
+<p>Node Count: <%= @lightning_statistics.node_count %></p>
+<p>Clearnet Nodes: <%= @lightning_statistics.clearnet_nodes %></p>
+<p>Tor Nodes: <%= @lightning_statistics.tor_nodes %></p>
+<p>Clearnet Tor Nodes: <%= @lightning_statistics.clearnet_tor_nodes %></p>
+<p>Unannounced Nodes: <%= @lightning_statistics.unannounced_nodes %></p>
+<p>Average Capacity: <%= @lightning_statistics.avg_capacity %></p>
+<p>Medeian Capacity: <%= @lightning_statistics.med_capacity %></p>
+<p>Average Fee Rate: <%= @lightning_statistics.avg_fee_rate %></p>
+<p>Mediant Fee Rate: <%= @lightning_statistics.med_fee_rate %></p>
