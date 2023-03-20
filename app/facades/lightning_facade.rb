@@ -2,7 +2,7 @@ class LightningFacade
 
     def self.lightning_statistics
         json = LightningService.get_lightning_statistics
-        lightningStatistics = LightningStats.new(json)
+        lightningStatistics = LightningStats.new(json[:latest])
     end
     
 end
